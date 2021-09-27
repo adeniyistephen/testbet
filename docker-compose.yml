@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  testbet:
+    container_name: 'testbet'
+    build: '.'
+    ports:
+      - '8080:8080' #CRUD API
+    depends_on:
+      - 'mongo'
+
+  mongo:
+    image: 'mongo:5.0'
+    container_name: 'mongo'
+    ports:
+      - '27017:27017'
