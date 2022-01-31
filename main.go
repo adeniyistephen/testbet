@@ -9,8 +9,6 @@ import (
 )
 
 func main() {
-	fmt.Println("hello world")
-
 	go StartPolling()
 	business.SaveAllSport()
 	odds := business.GetInPlayOddsUk("h2h", "uk")
